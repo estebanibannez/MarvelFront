@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 })
 export class ComicsService {
 
-  URL_API = `http://gateway.marvel.com/v1/public/comics?ts=1&apikey=${environment.PUBLIC_KEY}&hash=${environment.HASH}`;
+  URL_API = `https://gateway.marvel.com/v1/public/comics?ts=1&apikey=${environment.PUBLIC_KEY}&hash=${environment.HASH}`;
   // URL_API = `http://gateway.marvel.com/v1/public/comics?ts=1&apikey=${environment.PUBLIC_KEY}&hash=${environment.HASH}&title=Avengers`;
 
   constructor(private http : HttpClient) { }

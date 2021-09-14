@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./characters.component.scss']
 })
 export class CharactersComponent implements OnInit {
+  p: number = 1;
+  public offset = '0';
+  public limit = '100';
   allCharacters!: Observable<any>;
 
   constructor(private _characterService: CharactersService) { }
@@ -17,7 +20,7 @@ export class CharactersComponent implements OnInit {
   }
 
   getCharacters(){
-    this.allCharacters = this._characterService.getAllCharacters();
+    this.allCharacters = this._characterService.getAllCharacters(this.offset, this.limit);
   }
 
 }

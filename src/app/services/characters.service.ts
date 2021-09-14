@@ -12,13 +12,13 @@ export class CharactersService {
   // https://www.md5hashgenerator.com
 
 
-  URL_API = `http://gateway.marvel.com/v1/public/characters?ts=1&apikey=${environment.PUBLIC_KEY}&hash=${environment.HASH}`;
+  URL_API = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${environment.PUBLIC_KEY}&hash=${environment.HASH}`;
 
   constructor(private http: HttpClient) { }
 
   //obtiene los personajes
-  getAllCharacters():Observable<any>{
-    return this.http.get<any>(this.URL_API)
+  getAllCharacters(offset:string, limit:string):Observable<any>{
+    return this.http.get<any>(`${this.URL_API}&offset=${offset}&limit=${limit}`)
     .pipe(map((data:any) => data.data.results))
   }
 }
