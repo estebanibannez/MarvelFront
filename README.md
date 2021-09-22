@@ -1,5 +1,5 @@
 # Frontend Escalab Api Marvel
-![alt text](https://images.credly.com/size/340x340/images/aec0b6e8-e002-49c5-a3c9-5cf79adf649f/blob.png)
+![alt text](https://ibb.co/LP5pvbd)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
 ## Development server
