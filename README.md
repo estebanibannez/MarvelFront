@@ -1,5 +1,7 @@
 # Frontend Escalab Api Marvel
+```
 ![alt text](https://i.ibb.co/b3Jd7q5/escalablogo.png)
+```
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
 ## Development server
