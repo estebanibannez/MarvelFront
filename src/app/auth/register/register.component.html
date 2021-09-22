@@ -1,1 +1,33 @@
-<p>register works!</p>
+<div class="d-flex align-items-center h-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+        <mat-card>
+          <h3 class="text-center">Registro</h3>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="w-100">
+              <input type="text" matInput placeholder="Nombres" formControlName="firstname">
+              <mat-error *ngIf="data.firstname.errors?.required">Nombre es requerido</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input type="text" matInput placeholder="Apellidos" formControlName="lastname">
+              <mat-error *ngIf="data.lastname.errors?.required">Apellido es requerido</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input type="text" matInput placeholder="Username" formControlName="username">
+              <mat-error *ngIf="data.username.errors?.required">username es requerido</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input type="password" matInput placeholder="Contraseña" formControlName="password">
+              <mat-error *ngIf="data.password.errors?.required">Contraseña es requerida</mat-error>
+            </mat-form-field>
+            <div class="mt-4">
+              <button mat-raised-button color="primary">Registro</button>
+              <a [routerLink]="['/login']" class="ml-2" mat-button color="primary">Cancel</a>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

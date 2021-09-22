@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
       #main {
         display: table;
         width: 100%;
-        height: 80vh;
+        /* height: 80vh; */
         text-align: center;
       }
 
@@ -37,6 +37,14 @@ import { Component, OnInit } from '@angular/core';
         display: inline-block;
         padding-right: 12px;
         animation: type 0.5s alternate infinite;
+      }
+
+      .pika {
+        background-image: url('../../../assets/images/image.png') !important;
+        /* background-size: cover; */
+        height: 85% !important;
+        background-position: bottom;
+        background-repeat: no-repeat;
       }
 
       @keyframes type {

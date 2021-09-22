@@ -1,1 +1,29 @@
-<p>login works!</p>
+
+<div class="d-flex align-items-center h-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+        <div class="alert alert-danger" role="alert" *ngIf="submitted">
+          Username or password is incorrect
+        </div>
+        <mat-card>
+          <h3 class="text-center">{{ titulo | uppercase }}</h3>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="w-100">
+              <input type="text" matInput placeholder="Username" formControlName="username">
+              <mat-error *ngIf="data.username.errors?.required">Username is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <input type="password" matInput placeholder="Password" formControlName="password">
+              <mat-error *ngIf="data.password.errors?.required">Password is required</mat-error>
+            </mat-form-field>
+            <div class="form-group mt-4">
+              <button mat-raised-button color="primary">Ingresar</button>
+              <a [routerLink]="['/register']" class="ml-2" mat-button color="primary">Registrarse</a>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
