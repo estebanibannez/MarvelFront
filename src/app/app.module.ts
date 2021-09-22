@@ -15,7 +15,6 @@ import { Notfound404Component } from './pages/notfound404/notfound404.component'
 import { OtherHerosComponent } from './components/other-heros/other-heros.component';
 import { MaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { HomeModule } from './components/home/home.module';
 import { CharactersModule } from './components/characters/characters.module';
 import { AuthModule } from 'src/app/auth/auth.module';
 
@@ -40,7 +39,6 @@ import { AuthModule } from 'src/app/auth/auth.module';
     NgxPaginationModule,
     ReactiveFormsModule,
     MaterialModule,
-    // HomeModule,
     CharactersModule,
     AuthModule,
     PagesModule
