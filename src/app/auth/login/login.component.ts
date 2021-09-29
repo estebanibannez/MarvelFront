@@ -1,6 +1,11 @@
+import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-login',
@@ -97,6 +102,8 @@ import { Router } from '@angular/router';
   // styleUrls: ['./login.component.scss'],
 
 })
+
+
 export class LoginComponent implements OnInit {
 
   titulo:string = "acceso usuario"
@@ -108,11 +115,14 @@ export class LoginComponent implements OnInit {
   //   password: new FormControl(''),
   // });
 
-  constructor(private fb:FormBuilder, private router: Router) { }
+  constructor(private fb:FormBuilder,
+              private router: Router,
+              private _snackBar: MatSnackBar,
+              private _authService: AuthService,) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-          username: ['', Validators.required],
+          email: ['', Validators.required],
           password: ['', Validators.required]
     });
   }
@@ -120,16 +130,31 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.invalid) {
+        this._snackBar.open('', 'Falta llenar campos.', {
+          duration: 3000,
+        });
       return;
-    } else if (this.data.username.value == localStorage.getItem("username") && this.data.password.value == localStorage.getItem("password")) {
-      this.router.navigate(['/home']);
+
+    // } else if (this.data.email.value == localStorage.getItem("email") && this.data.password.value == localStorage.getItem("password")) {
+    //   this.router.navigate(['/home']);
     } else {
-      this.submitted = true;
+
+      Swal.fire('Espere un momento...');
+      Swal.showLoading();
+
+      this._authService.login(this.loginForm.value)
+      .subscribe((result) => {
+        debugger
+        Swal.close();
+        this.router.navigate(['/home']);
+      
+      }, (err) => {
+        console.log(err.error.error.message);
+        // this.submitted = true;
+        Swal.fire('Error al autenticar','','error');
+      });
+
     }
   }
-  // submit() {
-  //   if (this.form.valid) {
-  //     // this.submitEM.emit(this.form.value);
-  //   }
-  // }
+
 }

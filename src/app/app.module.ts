@@ -26,7 +26,6 @@ import { AuthModule } from 'src/app/auth/auth.module';
     CharacterComponent,
     ComicsComponent,
     ComicComponent,
-
     Notfound404Component,
     OtherHerosComponent,
   ],

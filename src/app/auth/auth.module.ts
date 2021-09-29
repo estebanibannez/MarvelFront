@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-
+import { HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ]
 })
 export class AuthModule { }
