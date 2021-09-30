@@ -20,3 +20,8 @@ Mira **https://developer.marvel.com/docs** .
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 $ git clone https://github.com/estebanibannez/MarvelFront.git
+
+## Despliegue 
+```
+https://dist-md5b6qbim-estebanibannez.vercel.app/login
+```
