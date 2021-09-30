@@ -19,6 +19,11 @@ export class CharactersService {
   //obtiene los personajes
   getAllCharacters(offset:string, limit:string):Observable<any>{
     return this.http.get<any>(`${this.URL_API}&offset=${offset}&limit=${limit}`)
-    .pipe(map((data:any) => data.data.results))
+    .pipe(map((data:any) =>  {console.log(data); return data.data.results}))
+  }
+
+
+  getFilterCharacter(value:string):void {
+
   }
 }

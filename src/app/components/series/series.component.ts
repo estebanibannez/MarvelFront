@@ -14,7 +14,7 @@ export class SeriesComponent implements OnInit {
 
   constructor(private _serviceSeries : SeriesService) {
     this.carrouselInstance();
-    this.listaSeries$ = this._serviceSeries.getListSeries('100','100');
+    this.listaSeries$ = this._serviceSeries.getListSeries('50','100');
    
   }
 

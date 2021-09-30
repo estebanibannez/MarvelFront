@@ -14,6 +14,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserModule } from '@angular/platform-browser';
 import { CarouselModule } from "ngx-owl-carousel-o";
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CarouselModule } from "ngx-owl-carousel-o";
     BrowserAnimationsModule,
     LayoutModule,
     NgxPaginationModule,
-    CarouselModule
+    CarouselModule,
+    SharedModule
   ]
 })
 export class ComponentsModule { }

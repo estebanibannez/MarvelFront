@@ -5,19 +5,21 @@ import { NavbarComponent } from 'src/app/shared/navbar/navbar.component';
 import { MaterialModule } from 'src/app/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   exports:[
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     BrowserModule,
     MaterialModule,
     RouterModule

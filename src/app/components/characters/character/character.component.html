@@ -1,13 +1,27 @@
-<div class="card animate__bounceIn">
+<mat-card class="animate__bounceIn">
+  <mat-card-header>
+    <!-- <mat-card-title>
+      <h6>{{ heroe.name }}</h6>
+    </mat-card-title> -->
+    <mat-card-subtitle>
+      <h6>{{ heroe.name }}</h6>
+    </mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   <img src="{{ heroe.thumbnail.path }}.{{ heroe.thumbnail.extension }}" class="card-img-top img-fluid"
     style="height: 200px;">
-  <div class="card-body">
-    <h6 class="card-title" style="color: black">{{ heroe.name }}</h6>
-    <!-- <p class="card-text">{{ heroe.description }}</p> -->
-  </div>
-</div>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <mat-card-content>
+    <p>
+      {{ heroe.description }}
+    </p>
+  </mat-card-content>
+  <mat-divider inset>
 
-<section>
-  <mat-divider></mat-divider>
-  <!-- <button mat-raised-button color="warn"><mat-icon>more_vert</mat-icon>Ver detalle</button> -->
-</section>
+  </mat-divider>
+  <mat-card-actions>
+    <a mat-button href="{{heroe.urls[0].url}}" class="btn btn-primary" target="_blank">ver mas detalles</a>
+  </mat-card-actions>
+
+</mat-card>

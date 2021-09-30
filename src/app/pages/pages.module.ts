@@ -5,6 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { MaterialModule } from 'src/app/material.module';
 
 
 
@@ -17,6 +18,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
     SharedModule,
     RouterModule,
     ComponentsModule,
+    MaterialModule
   ]
 })
 export class PagesModule { }

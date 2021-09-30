@@ -1,18 +1,85 @@
-
 <div class="container my-5">
-  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 shadow-lg">
     <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
       <h1 class="display-4 fw-bold lh-1">Bienvenido Marvel APP!</h1>
-      <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <p class="lead"></p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-        <button [routerLink]="['/characters']" type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Personajes</button>
+        <button [routerLink]="['/characters']" type="button"
+          class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Personajes</button>
         <button [routerLink]="['/comics']" type="button" class="btn btn-outline-secondary btn-lg px-4">comics</button>
       </div>
     </div>
-    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img class="rounded-lg-3" src="../../../assets/images/img.png" alt="" width="300">
-    </div>
+    <!-- <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+      <img class="rounded-lg-3" src="../../../assets/images/img.png" alt="" width="300">
+    </div> -->
   </div>
 </div>
+<div class="container">
 
-<app-series></app-series>
+  <!-- Jumbotron Header -->
+  <header class="jumbotron my-4 HeroSpotlight">
+    <h1 class="display-3 p-2 ComicTitle">Capitana Marvel</h1>
+    <div class="desktop">
+      <div class="HeroSpotlightDesc">
+        <p class="lead p-3">Cuando la jefa de seguridad de la NASA, Carol Danvers, fue expuesta a un poderoso dispositivo
+          alienígena, ¡se transformó en el poderoso héroe cósmico, Capitán Marvel!</p>
+      </div>
+
+      <a href="https://www.marvel.com/characters/captain-marvel-carol-danvers"  mat-button color="warn" target="_blank"
+       >Ver mas!</a>
+    </div>
+  </header>
+
+  <!-- Page Features -->
+  <div class="row text-center">
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="/assets/images/CaptainMarvelcomic1.jpg" alt="">
+        <div class="card-body bg-dark">
+          <h4 class="card-title">Captain Marvel Vol. 1: Rise of Alpha Flight</h4>
+          <p class="card-text">¡Oh Capitán, mi Capitán! Carol Danvers se eleva más alto que nunca con su mayor misión
+            sin embargo, lidera la primera línea de defensa de la Tierra, ¡el nuevo programa espacial Alpha Flight! </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="/assets/images/CaptainMarvelcomic2.jpg" alt="">
+        <div class="card-body bg-dark">
+          <h4 class="card-title">Captain Marvel Vol. 2: Civil War II</h4>
+          <p class="card-text">Viejos amigos se enfrentan como enemigos en un evento que cambiará la vida del Capitán
+            Marvel
+            ¡para siempre! Cuando estalla una nueva Guerra Civil, Carol Danvers se encuentra a la vanguardia del
+            conflicto.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="/assets/images/CaptainMarvelcomic3.jpg" alt="">
+        <div class="card-body bg-dark">
+          <h4 class="card-title">Captain Marvel: Earth's Mightiest Hero Vol. 5</h4>
+          <p class="card-text">
+            Es una nueva y audaz frontera para Carol Danvers, que se eleva a alturas cada vez mayores como líder
+            del nuevo programa espacial Alpha Flight! Sí, Alpha Flight, incluidos los clásicos favoritos Puck, Sasquatch
+            y Aurora! </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="/assets/images/CaptainMarvelcomic4.jpg" alt="">
+        <div class="card-body bg-dark">
+          <h4 class="card-title">Captain Marvel (2016) #3</h4>
+          <p class="card-text">Los poderes del Capitán Marvel están en peligro y el momento no podría ser peor. Toda la evidencia
+            dice que Alpha Flight tiene un traidor entre ellos. ¿Cómo descubrirán Carol y su equipo los orígenes de
+            el barco misterioso cuando ni siquiera pueden confiar el uno en el otro?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- <app-series></app-series> -->
