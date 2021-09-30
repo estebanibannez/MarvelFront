@@ -40,29 +40,27 @@ export class RegisterComponent implements OnInit {
       console.log(this.registerForm.value);
 
       this._authService.signUp(this.registerForm.value).subscribe(result => {
-        console.log(result)
+        console.log(result);
+        
         this._snackBar.open('Register Successfully', 'Success', {
           duration: 3000,
         });
         this.router.navigate(['/login']);
 
       }, (err) => {
-        debugger
+        debugger;
         console.log(err.error.error.message);
         if(err.error.error.message.includes('WEAK_PASSWORD')){
 
-
           Swal.fire('La contraseña debe ser superior a 6 caracteres, intente con otra');
 
-          this._snackBar.open('', 'La contraseña debe ser superior a 6 caracteres, intente con otra', {
-            duration: 3000,
-          });
-        }else{
-          this._snackBar.open('', 'El correo ya se encuentra registrado, intente con otro', {
-            duration: 3000,
-          });
+          // this._snackBar.open('', 'La contraseña debe ser superior a 6 caracteres, intente con otra', {
+          //   duration: 3000,
+          // });
         }
-      
+        if(err.error.error.message.includes('EMAIL_EXISTS')){
+          Swal.fire('El correo ya se encuentra registrado');
+        }
       });
 
 

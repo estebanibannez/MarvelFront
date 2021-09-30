@@ -17,7 +17,6 @@ export class AuthService {
     this.verifyToken();
   }
 
-
   logout() {
     localStorage.removeItem('token');
   }
@@ -34,7 +33,6 @@ export class AuthService {
       authData
     ).pipe(
       map( (resp : any)  => {
-        debugger
         this.saveToken( resp['idToken'] );
         return resp;
       })
@@ -54,7 +52,6 @@ export class AuthService {
       authData
     ).pipe(
       map( (resp : any)  => {
-        debugger
         this.saveToken( resp['idToken'] );
         return resp;
       })
