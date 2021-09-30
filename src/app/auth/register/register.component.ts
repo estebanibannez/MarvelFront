@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -47,8 +47,13 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/login']);
 
       }, (err) => {
+        debugger
         console.log(err.error.error.message);
-        if(err.error.error.message =='WEAK_PASSWORD'){
+        if(err.error.error.message.includes('WEAK_PASSWORD')){
+
+
+          Swal.fire('La contraseña debe ser superior a 6 caracteres, intente con otra');
+
           this._snackBar.open('', 'La contraseña debe ser superior a 6 caracteres, intente con otra', {
             duration: 3000,
           });
