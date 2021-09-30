@@ -11,5 +11,6 @@ export const environment = {
     storageBucket: "marvel-app-login-c093e.appspot.com",
     messagingSenderId: "628843474265",
     appId: "1:628843474265:web:69599150e3115fcebc7048"
-  }
+  },
+  APIKEY:"AIzaSyDfcOWuW5fUUR5rM582vclPoYdj2TPJcSc"
 };

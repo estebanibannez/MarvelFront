@@ -1,0 +1,16 @@
+    <div class="p-5">
+      <owl-carousel-o [options]="customOptions">
+
+        <ng-container *ngFor="let elemento of listaSeries$ | async; let i = index">
+          <ng-template carouselSlide [id]="elemento.id">
+            <h6>{{elemento.title}}</h6>
+            <img [src]="elemento.thumbnail.path +'.'+elemento.thumbnail.extension" [alt]="elemento.title"
+              [title]="elemento.title">
+          </ng-template>
+          
+        </ng-container>
+
+      </owl-carousel-o>
+
+    </div>
+

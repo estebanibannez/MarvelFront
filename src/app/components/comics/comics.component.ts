@@ -8,7 +8,7 @@ import { ComicsService } from 'src/app/services/comics.service';
   styleUrls: ['./comics.component.scss']
 })
 export class ComicsComponent implements OnInit {
-  public offset = '0';
+  public offset = '100';
   public limit = '100';
   p: number = 1;
   allComics!: Observable<any>;

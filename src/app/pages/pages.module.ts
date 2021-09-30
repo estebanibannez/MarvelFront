@@ -4,6 +4,8 @@ import { HomeComponent } from 'src/app/pages/home/home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
+import { ComponentsModule } from 'src/app/components/components.module';
+
 
 
 
@@ -14,6 +16,7 @@ import { PagesComponent } from './pages.component';
     CommonModule,
     SharedModule,
     RouterModule,
+    ComponentsModule,
   ]
 })
 export class PagesModule { }

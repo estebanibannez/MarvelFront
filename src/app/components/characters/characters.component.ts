@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class CharactersComponent implements OnInit {
   p: number = 1;
-  public offset = '0';
+  public offset = '100';
   public limit = '100';
   allCharacters!: Observable<any>;
 

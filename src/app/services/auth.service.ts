@@ -8,8 +8,7 @@ import { environment } from '../../environments/environment'
   providedIn: 'root'
 })
 export class AuthService {
-  // private APIKEY = environment.firebaseConfig.apiKey;
-  private APIKEY = `AIzaSyDfcOWuW5fUUR5rM582vclPoYdj2TPJcSc`;
+  private APIKEY = environment.APIKEY;
   private URL = `https://identitytoolkit.googleapis.com/v1`;
 
   userToken!: string;
