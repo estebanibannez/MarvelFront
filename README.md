@@ -8,13 +8,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+
+Mira **https://developer.marvel.com/docs** .
+
+## Recursos 
+```
+Base de datos para login y registros
+```
+ **https://firebase.google.com/** .
 ```
  Api publica utilizada para este proyecto en Angular 🚀
 ```
 Mira **https://developer.marvel.com/docs** .
 
 
->> Create by Esteban Ibanez
 
 ## clonar proyecto 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
@@ -22,6 +29,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 $ git clone https://github.com/estebanibannez/MarvelFront.git
 
 ## Despliegue 
-```
-https://dist-md5b6qbim-estebanibannez.vercel.app/login
-```
+
+**https://dist-md5b6qbim-estebanibannez.vercel.app/login**
+
+>> Esteban Ibanez
