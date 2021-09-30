@@ -32,6 +32,7 @@ $ git clone https://github.com/estebanibannez/MarvelFront.git
 
 ## test user 
 ```
- test@test.com 📋
+ user > test@test.com 📋
+ pass > 123456
 ```
 >> Esteban Ibanez ⌨️✒️
