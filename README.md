@@ -30,6 +30,6 @@ $ git clone https://github.com/estebanibannez/MarvelFront.git
 
 ## Despliegue 
 
-**https://dist-md5b6qbim-estebanibannez.vercel.app/login**
+**https://dist-md5b6qbim-estebanibannez.vercel.app/**
 
 >> Esteban Ibanez
