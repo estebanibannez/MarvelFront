@@ -48,9 +48,16 @@ export class RegisterComponent implements OnInit {
 
       }, (err) => {
         console.log(err.error.error.message);
-        this._snackBar.open('', 'El correo ya se encuentra registrado, intente con otro', {
-          duration: 3000,
-        });
+        if(err.error.error.message =='WEAK_PASSWORD'){
+          this._snackBar.open('', 'La contraseña debe ser superior a 6 caracteres, intente con otra', {
+            duration: 3000,
+          });
+        }else{
+          this._snackBar.open('', 'El correo ya se encuentra registrado, intente con otro', {
+            duration: 3000,
+          });
+        }
+      
       });
 
 
