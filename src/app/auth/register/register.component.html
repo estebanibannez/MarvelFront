@@ -18,8 +18,9 @@
               <mat-error *ngIf="data.email.errors?.required">El correo es requerido</mat-error>
             </mat-form-field>
             <mat-form-field class="w-100">
-              <input type="password" matInput placeholder="Contraseña" formControlName="password">
+              <input type="password" matInput placeholder="Contraseña" formControlName="password" min="6">
               <mat-error *ngIf="data.password.errors?.required">Contraseña es requerida</mat-error>
+              <mat-error *ngIf="data.password.errors?.minlength">Contraseña debe ser superior a 6 caracteres</mat-error>
             </mat-form-field>
             <div class="mt-4">
               <button mat-raised-button color="primary">Registro</button>
