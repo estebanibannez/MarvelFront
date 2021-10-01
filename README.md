@@ -3,6 +3,16 @@
 ![alt text](http://imgfz.com/i/G5l2ad1.png)
 ```
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Resources:
+Angular material
+ngx-paginator
+firebase
+
+Aplicación front Angular que consume 3 endpoint de api publica de marvel,
+- personajes de marvel
+- comics de UCM
+- series de UCM
+consta de un login y registro integrado con authenticacion de firebase.
 ```
 ## Development server
 
