@@ -7,6 +7,8 @@ Resources:
 Angular material
 ngx-paginator
 firebase
+owl-carousel
+sweetalert2
 
 Aplicación front Angular que consume 3 endpoint de api publica de marvel,
 - personajes de marvel
